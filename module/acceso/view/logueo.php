@@ -1,7 +1,19 @@
-<?php
 
-use Config\Messages_es;
+<?php
+//require_once '../../../config/loader.php';
+//
+//use Module\Acceso\Controller\LogeoController;
+//
+//$objeto = new LogeoController;
+//$docu = '1234';
+//$pass = '12345';
+//$records = $objeto->getAllLogeo($docu, $pass);
+//echo "<pre>";
+//print_r($records);
+//echo "</pre>";
+//exit();
 ?>
+
 
 <!DOCTYPE html>
 <!--
@@ -16,15 +28,17 @@ and open the template in the editor.
     <link rel="shortcut icon" href="../../../public/img/220px-EscudoUsta.ico" />
     <meta charset="UTF-8">
     <title>Inicio de sesion</title>
-    <link href="../../../public/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="../../../public/css/fontawesome-all.css" rel="stylesheet" type="text/css" />
-    <link href="../../../public/css/jquery-ui.css" rel="stylesheet" type="text/css" />
-    <link href="../../../public/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="../../../public/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../public/css/fontawesome-all.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../public/css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="../../../public/css/animate.css" rel="stylesheet" type="text/css"/>
 
-    <script src="../../../public/js/jquery-3.3.1.js" type="text/javascript"></script>
+
+    <script src="../../../public/js/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="../../../public/js/bootstrap.js" type="text/javascript"></script>
     <script src="../../../public/js/jquery-ui.js" type="text/javascript"></script>
     <script src="../../../public/js/jquery.validate.js" type="text/javascript"></script>
+
 
 
 
@@ -51,10 +65,10 @@ and open the template in the editor.
                         <hr />
                         <p class="text-right">
                         <div align="left" class="container">
-                            <form id="formlogeo" method="post" name="formlogeo" action="../../medicnow/controller/postlogeo.php">
+                            <form id="formlogeo" method="post" name="formlogeo" action="../controller/postlogeo.php">
                                 <div class="form-group">
                                     <label for="name">Usuario:</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Digite su documento de identidad">
+                                    <input type="tel" class="form-control" id="docId" name="docId" placeholder="Digite su documento de identidad">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Contraseña</label>
@@ -68,7 +82,7 @@ and open the template in the editor.
 
                                 <div class="form-group form-check">
                                     <div class="col-lg-10">
-                                        <a type="Submit" class="btn  btn-primary" id="submit" name="submit" href="../../admin/view/inicio.php">Ingresar</a>
+                                        <a type="Submit" class="btn  btn-primary" id="submit" name="submit" href="../controller/postlogeo.php">Ingresar</a>
                                         <a href="../../../public/index.php" class="btn  btn-secondary">Regresar</a>
                                     </div>
                                 </div>

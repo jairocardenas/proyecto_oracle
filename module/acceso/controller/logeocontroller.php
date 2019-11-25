@@ -1,14 +1,14 @@
 <?php
 
-namespace Module\MedicNow\Controller;
+namespace Module\Acceso\Controller;
 
-use Module\MedicNow\Repository\LogeoRepository;
+use Module\Acceso\Repository\LogeoRepository;
 
 class LogeoController {
 
-    public function getAllLogeo() {
+    public function getAllLogeo($docu, $pass) {
         $objRepository = new LogeoRepository();
-        return $objRepository->getAll();
+        return $objRepository->getAll($docu, $pass);
     }
 
 }

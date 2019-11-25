@@ -37,19 +37,13 @@ class Conn {
                 $this->_conn->query("SET SESSION sql_mode=\"STRICT_TRANS_TABLES \"");
                 $this->_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 break;
+
             case "pgsql":
-//                $textString = "pgsql::host={$this->_server};dbname={$this->_dbname}";
-                $db_host = "localhost";
-                $db_dbname = "bd_proyecto_oracle";
-                $db_user = "user_php";
-                $db_password = "123456";
-
-                $this->_conn = new PDO("pgsql:host=$db_host;dbname=$db_dbname", $db_user, $db_password);
-                $this->_conn->query("SET SESSION sql_mode=\"STRICT_TRANS_TABLES \"");
+                $textString = "pgsql:host={$this->_server};port={$this->_port};dbname={$this->_dbname}";
+                $this->_conn = new PDO($textString, $this->_user, $this->_password);
                 $this->_conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//                $this->_conn = setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
                 break;
+
             case "orcale":
                 $textString = "oracle::host={$this->_server};dbname={$this->_dbname}";
                 $this->_conn = new PDO($textString, $this->_user, $this->_password);

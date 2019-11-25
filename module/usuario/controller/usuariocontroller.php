@@ -1,10 +1,21 @@
 <?php
 
-namespace Module\Usuario\Controller;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 use Module\Usuario\Repository\UsuarioRepository;
-use Module\Usuario\Model\Persona;
+use Module\Usuario\Model\Usuario;
 
+namespace Module\Usuario\Controller;
+
+/**
+ * Description of usuariorepository
+ *
+ * @author camol
+ */
 class UsuarioController {
 
     private $_objRepository;
@@ -13,12 +24,8 @@ class UsuarioController {
         $this->_objRepository = new UsuarioRepository();
     }
 
-    public function getAllCliente() {
-        return $this->_objRepository->getAll();
+    public function addUser(Usuario $entity) {
+        return $this->_objRepository->add($entity);
     }
 
-   
-
 }
-
-?>

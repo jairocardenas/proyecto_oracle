@@ -11,8 +11,9 @@
  *
  * @author camol
  */
+
 namespace Module\Usuario\Model;
- 
+
 class Persona {
 
     private $_idpersona;
@@ -27,11 +28,11 @@ class Persona {
     private $_direccion;
     private $_telefono;
     private $_correoelectronico;
-    
+    private $_psw;
+
     function __construct() {
         
     }
-    
     function get_idpersona() {
         return $this->_idpersona;
     }
@@ -78,6 +79,10 @@ class Persona {
 
     function get_correoelectronico() {
         return $this->_correoelectronico;
+    }
+
+    function get_psw() {
+        return $this->_psw;
     }
 
     function set_idpersona($_idpersona) {
@@ -128,10 +133,11 @@ class Persona {
         $this->_correoelectronico = $_correoelectronico;
     }
 
-
+    function set_psw($_psw) {
+        $this->_psw = $_psw;
+    }
 
 
 }
-
 
 ?>

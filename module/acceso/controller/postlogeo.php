@@ -5,11 +5,14 @@ require_once '../../../config/loader.php';
 use Module\MedicNow\Controller\LogeoController;
 
 $objeto = new LogeoController();
-$records = $objeto->getAllLogeo();
-session_start();
 
-$nom = filter_input(INPUT_POST, 'name');
+print getcwd(); 
+
+$doc = filter_input(INPUT_POST, 'docId');
 $pws = filter_input(INPUT_POST, 'pwd');
+
+$records = $objeto->getAllLogeo($doc, $pws);
+session_start();
 
 foreach ($records as $key => $values) {
     if (empty($records)) {
@@ -20,7 +23,7 @@ foreach ($records as $key => $values) {
 
         if (($nom == $_nombreUsuario) &&
                 ($pws == $_contrasenna)) {
-            header("location: ../view/inicio.php");
+            header("location: ../../usuario/view/formulariopreguntas.php");
         } else {
             echo "no hay registros";
             session_abort();

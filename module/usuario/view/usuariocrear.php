@@ -52,27 +52,23 @@ and open the template in the editor.
         </header>
         <p></p>
 
-        <!--        <nav aria-label="breadcrumb" class="container">
-                        <ol class="breadcrumb animated fadeInRight">
-                            <li class="breadcrumb-item"><a href="../../../public/index.php"><i class="fa fa-home"></i></a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Registros de invitados</li>
-                        </ol>
-                    </nav>-->
-
-
         <div class="row  animated fadeInLeft">
             <div class="container">
                 <div class="col-lg-12">
                     <div class="card card-outline-secondary">
+
                         <div class="card-header bg-warning text-black">
                             <h3 class="mb-0 text-center">Crear usuario </h3>
                         </div>
+
                         <div class="card-body ">
+
                             <div class="alert alert-info p-2 pb-3">
                                 <a class="close font-weight-normal initialism" data-dismiss="alert" href="#"><samp>&times;</samp></a>
                                 Diligencie este formulario para registro de usuario.
                             </div>
-                            <form id="myform" name="myform" method="post" action="../controller/epspostcontrollercreate.php">
+
+                            <form id="myform" name="myform" method="post" action="../controller/personapostcontroller.php">
                                 <div class="form-group row ">
                                     <label class=" col-sm-3 col-form-label" for="name">Primer Nombre: </label>
                                     <div class="col-lg-6">
@@ -81,23 +77,35 @@ and open the template in the editor.
                                 </div>
 
                                 <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Otros nombres: </label>
+                                    <label class=" col-sm-3 col-form-label" for="oName">Otros nombres: </label>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="name" name="name" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
+                                        <input class="form-control" type="text" id="oName" name="oName" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
                                     </div>
                                 </div>
 
                                 <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Primer Apellido: </label>
+                                    <label class=" col-sm-3 col-form-label" for="pAp">Primer Apellido: </label>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Ingrese primer apellido.">
+                                        <input class="form-control" type="text" id="pAp" name="pAp" placeholder="Ingrese primer apellido.">
                                     </div>
                                 </div>
 
                                 <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Otros apellidos: </label>
+                                    <label class=" col-sm-3 col-form-label" for="oAp">Otros apellidos: </label>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="lastname" name="lastname" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
+                                        <input class="form-control" type="text" id="oAp" name="oAp" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row ">
+                                    <label class="col-sm-3 control-label" for="tDoc">Tipo de documento de identidad: </label>
+                                    <div class="col-sm-6">
+                                        <select id="genr" class="form-control" name="tDoc">
+                                            <option value="">Seleccione tipo de documento de identidad</option>
+                                            <option value="1">CC </option>
+                                            <option value="2">TI </option>
+                                            <option value="3">CE </option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -121,16 +129,9 @@ and open the template in the editor.
                                 </div>
 
                                 <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Otros nombres: </label>
+                                    <label class=" col-sm-3 col-form-label" for="fNac">Fecha de nacimiento: </label>
                                     <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="name" name="name" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="nmUs">Nombre de usuario: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="nmUs" name="nmUs" placeholder="Ingrese nombre de usuario">
+                                        <input class="form-control" type="date" id="fNac" name="fNac" min="1934-01-01" max="2005-01-01">
                                     </div>
                                 </div>
 
@@ -158,7 +159,7 @@ and open the template in the editor.
                                 <div class="form-group row ">
                                     <label class="col-lg-3 col-form-label " for="numCel">Telefono:</label>
                                     <div class="col-lg-6 ">
-                                        <input type="text" class="form-control" id="numCel" name="numCel" placeholder="Ingrese el número de telefono.">
+                                        <input type="tel" class="form-control" id="numCel" name="numCel" placeholder="Ingrese el número de telefono.">
                                     </div>
                                 </div>
 
