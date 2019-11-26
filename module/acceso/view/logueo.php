@@ -67,8 +67,8 @@ and open the template in the editor.
                         <div align="left" class="container">
                             <form id="formlogeo" method="post" name="formlogeo" action="../controller/postlogeo.php">
                                 <div class="form-group">
-                                    <label for="name">Usuario:</label>
-                                    <input type="tel" class="form-control" id="docId" name="docId" placeholder="Digite su documento de identidad">
+                                    <label for="docId">Usuario:</label>
+                                    <input type="number" class="form-control" id="docId" name="docId" placeholder="Digite su documento de identidad">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwd">Contraseña</label>

@@ -2,10 +2,7 @@
 
 require_once '../../../config/loader.php';
 
-//echo "Estas son las variables Jairo";
-//echo "<pre>";
-//print_r($_POST);
-//echo "</pre>";
+
 
 use Module\Usuario\Controller\PersonaController;
 use Module\Usuario\Controller\UsuarioController;
@@ -26,7 +23,7 @@ $correo = filter_input(INPUT_POST, "email");
 $nmtel = filter_input(INPUT_POST, "numCel");
 
 $entityPersona = new Persona();
-$entityUsuario = new Usuario();
+//$entityUsuario = new Usuario();
 
 $entityPersona->set_primernombre($nom);
 $entityPersona->set_otrosnombres($onom);
@@ -41,17 +38,17 @@ $entityPersona->set_telefono($nmtel);
 $entityPersona->set_correoelectronico($correo);
 $entityPersona->set_psw($con);
 
-$entityUsuario->set_idpersona(2);
-$entityUsuario->set_idusuario('1');
+//$entityUsuario->set_idpersona('2');
+//$entityUsuario->set_idusuario('1');
 
 
 
 
 $objetoPersona = new PersonaController();
-$objetoUsuario = new UsuarioController();
+//$objetoUsuario = new UsuarioController();
 
 $objetoPersona->addPerson($entityPersona);
-$objetoUsuario->addUser($entityUsuario);
+//$objetoUsuario->addUser($entityUsuario);
 
-header("location: ../view/listarpersona.php");
+//header("location: ../view/listarpersona.php");
 ?>

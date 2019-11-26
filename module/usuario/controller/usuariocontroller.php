@@ -6,10 +6,10 @@
  * and open the template in the editor.
  */
 
+namespace Module\Usuario\Controller;
 use Module\Usuario\Repository\UsuarioRepository;
 use Module\Usuario\Model\Usuario;
 
-namespace Module\Usuario\Controller;
 
 /**
  * Description of usuariorepository

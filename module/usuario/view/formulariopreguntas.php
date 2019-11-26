@@ -39,7 +39,7 @@ and open the template in the editor.
         <script src="../../../public/js/jquery-ui.js" type="text/javascript"></script>
         <script src="../../../public/js/jquery.validate.js" type="text/javascript"></script>
         <script src="js/validacion.js" type="text/javascript"></script>
-        <title>Usuario</title>
+        <title>Preguntas</title>
     </head>
 
     <body id="centro">
@@ -52,119 +52,63 @@ and open the template in the editor.
         </header>
         <p></p>
 
+        <!--        <nav aria-label="breadcrumb" class="container">
+                        <ol class="breadcrumb animated fadeInRight">
+                            <li class="breadcrumb-item"><a href="../../../public/index.php"><i class="fa fa-home"></i></a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Registros de invitados</li>
+                        </ol>
+                    </nav>-->
+
+
         <div class="row  animated fadeInLeft">
             <div class="container">
                 <div class="col-lg-12">
                     <div class="card card-outline-secondary">
-                        
-                        <div class="card-header bg-warning text-black">
-                            <h3 class="mb-0 text-center">Crear usuario </h3>
-                        </div>
-                        
+                        <div class="card-header bg-warning text-black"><br></div>
                         <div class="card-body ">
-                            <div class="alert alert-info p-2 pb-3">
-                                <a class="close font-weight-normal initialism" data-dismiss="alert" href="#"><samp>&times;</samp></a>
-                                Diligencie este formulario para registro de usuario.
-                            </div>
-                            
-                            <form id="myform" name="myform" method="post" action="../controller/personapostcontroller.php">
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Primer Nombre: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="name" name="name" placeholder="Ingrese primer nombre." required="true">
+                            <form id="myform" name="myform" method="post" action="../controller/epspostcontrollercreate.php">
+
+                                <div class="jumbotron jumbotron-fluid">
+                                    <div class="container">
+                                        <h1>PREGUNTA NUMERO 1</h1> 
+                                        <p>las especies son:</p> 
                                     </div>
                                 </div>
 
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="oName">Otros nombres: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="oName" name="oName" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="pAp">Primer Apellido: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="pAp" name="pAp" placeholder="Ingrese primer apellido.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="oAp">Otros apellidos: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="oAp" name="oAp" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class="col-sm-3 control-label " for="docId">Doumento Identidad: </label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="docId" name="docId" placeholder="Digite doumento identidad" />
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class="col-sm-3 control-label" for="genr">Genero: </label>
-                                    <div class="col-sm-6">
-                                        <select id="genr" class="form-control" name="genr">
-                                            <option value="">Seleccione tipo de genero</option>
-                                            <option value="1">Masculino </option>
-                                            <option value="2">Femenino </option>
-                                            <option value="3">Otro </option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="name">Otros nombres: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="name" name="name" placeholder="Ingrese segundo o si tiene más de dos apellidos.">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row ">
-                                    <label class=" col-sm-3 col-form-label" for="nmUs">Nombre de usuario: </label>
-                                    <div class="col-lg-6">
-                                        <input class="form-control" type="text" id="nmUs" name="nmUs" placeholder="Ingrese nombre de usuario">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 control-label" for="pass">Contraseña:</label>
-                                    <div class="col-lg-6">
-                                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Ingrese contraseña">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label class="col-sm-3 control-label" for="dir">Dirección:</label>
-                                    <div class="col-lg-6">
-                                        <input type="text" class="form-control" id="dir" name="dir">
-                                    </div>
+                                <div class="form-check ">
+                                    <div class="col-lg-1"></div>
+                                    <input class="form-check-input" type="radio" name="qus1" id="qus1" value="A" checked />
+                                    <label class=" col-sm-5 form-check-label" for="name">A: la primera pregunta es  </label>
                                 </div>
 
 
-                                <div class="form-group row ">
-                                    <label class="col-lg-3 col-form-label " for="numCel">Telefono:</label>
-                                    <div class="col-lg-6 ">
-                                        <input type="text" class="form-control" id="numCel" name="numCel" placeholder="Ingrese el número de telefono.">
-                                    </div>
+
+                                <div class="form-check ">
+                                    <div class="col-lg-1"></div>
+                                    <input class="form-check-input" type="radio" name="qus1" id="qus1" value="B" checked />
+                                    <label class=" col-sm-5 form-check-label" for="name">B: la primera pregunta es  </label>
                                 </div>
 
-                                <div class="form-group row ">
-                                    <label class="col-lg-3 col-form-label " for="email">Email:</label>
-                                    <div class="col-lg-6 ">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese el email.">
-                                    </div>
+                                <div class="form-check ">
+                                    <div class="col-lg-1"></div>
+                                    <input class="form-check-input" type="radio" name="qus1" id="qus1" value="C" checked />
+                                    <label class=" col-sm-5 form-check-label" for="name">C: la primera pregunta es  </label>
+                                </div>
+                                
+                                <div class="form-check ">
+                                    <div class="col-lg-1"></div>
+                                    <input class="form-check-input" type="radio" name="qus1" id="qus1" value="D" checked />
+                                    <label class=" col-sm-5 form-check-label" for="name">D: la primera pregunta es  </label>
                                 </div>
 
-
+                                <br>
+                                <br>
 
                                 <div class="form-group row">
                                     <label class="col-lg-4 col-form-label "></label>
                                     <div class="col-lg-6">
                                         <button type="Submit" class="btn btn-primary">
-                                            Crear Registro
+                                            verificar
                                         </button>
                                         <button type="Reset" class="btn btn-secondary">Borrar Formulario</button>
                                     </div>

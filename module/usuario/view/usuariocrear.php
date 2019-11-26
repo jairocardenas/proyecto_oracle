@@ -1,5 +1,5 @@
 <?php
-//require_once '../../../config/loader.php';
+require_once '../../../config/loader.php';
 //
 //use Module\Clientes\Controller\ProcedimientoController;
 //

@@ -3,13 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/acceso/repository/logeorepository.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/acceso/controller/logeocontroller.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/view/listarpersona.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/repository/personarepository.php</file>
             <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/view/usuariocrear.php</file>
             <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/view/formulariopreguntas.php</file>
             <file>file:/C:/xampp/htdocs/proyectoOracle/module/acceso/controller/postlogeo.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/controller/personapostcontroller.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/controller/personacontroller.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/data/script/pgsql/DMLinsert.sql</file>
             <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/repository/usuariorepository.php</file>
             <file>file:/C:/xampp/htdocs/proyectoOracle/module/acceso/view/logueo.php</file>
-            <file>file:/C:/xampp/htdocs/proyectoOracle/module/admin/view/inicio.php</file>
-            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/view/listarpersona.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/module/usuario/model/usuario.php</file>
+            <file>file:/C:/xampp/htdocs/proyectoOracle/data/mer/mer_proyecto_oracle_page-0001.jpg</file>
         </group>
     </open-files>
 </project-private>

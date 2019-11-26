@@ -6,6 +6,10 @@ use PDO;
 use Config\Conn;
 use Module\Usuario\Model\Persona;
 
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 class PersonaRepository extends Conn {
 
     public function getAll() {
@@ -21,14 +25,14 @@ class PersonaRepository extends Conn {
         return $rows;
     }
 
-     public function add(Persona $entity) {
+    public function add(Persona $entity) {
         $sql = "INSERT INTO persona( primernombre, otrosnombres, primerapellido, otroapellido, tipodocumento, documento, genero, fechanaciemiento, direccion, telefono, correoelectronico, psw ) ";
         $sql .= "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $resource = $this->_conn->prepare($sql);
 
-//        var_dump($entity);
-
-        $pNom = $entity->get_primerapellido();
+       
+        
+        $pNom = $entity->get_primernombre();
         $oNom = $entity->get_otrosnombres();
         $pAp = $entity->get_primerapellido();
         $oAp = $entity->get_otroapellido();
@@ -39,7 +43,7 @@ class PersonaRepository extends Conn {
         $dir = $entity->get_direccion();
         $tel = $entity->get_telefono();
         $crr = $entity->get_correoelectronico();
-        $pas = $entity->get_password();
+        $pas = $entity->get_psw();
 
         $resource->bindParam(1, $pNom);
         $resource->bindParam(2, $oNom);
@@ -54,16 +58,15 @@ class PersonaRepository extends Conn {
         $resource->bindParam(11, $crr);
         $resource->bindParam(12, $pas);
 
+        return   $resource->execute();
 
-        $resource->execute();
-
-        echo "<pre>";
-        $resource->debugDumpParams();
-        echo "</pre>";
+//        echo "<pre>";
+//        $resource->debugDumpParams();
+//        echo "</pre>";
 
         return $resource;
     }
 
-  }
+}
 
 ?>
