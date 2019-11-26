@@ -6,16 +6,16 @@ use PDO;
 use Config\Conn;
 use Module\Usuario\Model\Persona;
 
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 class PersonaRepository extends Conn {
 
     public function getAll() {
-       
+
         $fields = "  concat(p.primernombre,' ',p.otrosnombres,' ',p.primerapellido) AS nombres,p.documento,pe.perfil,p.telefono,p.correoelectronico ";
-       //se formula la consulta para la baase de datos
+        //se formula la consulta para la baase de datos
         $sql = "SELECT  {$fields}  ";
         $sql .= "FROM persona p INNER JOIN  usuario u ON p.idpersona = u.idpersona INNER JOIN perfil pe  ON pe.idperfil = u.idperfil ";
         $sql .= "ORDER BY p.primernombre ASC;";

@@ -27,10 +27,6 @@ class UsuarioRepository extends Conn {
 
         $resource->execute();
 
-//        echo "<pre>";
-//        $resource->debugDumpParams();
-//        echo "</pre>";
-
         return $resource;
     }
 
