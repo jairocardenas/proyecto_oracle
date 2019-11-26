@@ -23,7 +23,7 @@ class UsuarioController {
     public function __construct() {
         $this->_objRepository = new UsuarioRepository();
     }
-
+//agregar un nuevo usuario
     public function addUser(Usuario $entity) {
         return $this->_objRepository->add($entity);
     }

@@ -13,15 +13,17 @@ error_reporting(E_ALL);
 class PersonaRepository extends Conn {
 
     public function getAll() {
+       
         $fields = "  concat(p.primernombre,' ',p.otrosnombres,' ',p.primerapellido) AS nombres,p.documento,pe.perfil,p.telefono,p.correoelectronico ";
+       //se formula la consulta para la baase de datos
         $sql = "SELECT  {$fields}  ";
         $sql .= "FROM persona p INNER JOIN  usuario u ON p.idpersona = u.idpersona INNER JOIN perfil pe  ON pe.idperfil = u.idperfil ";
         $sql .= "ORDER BY p.primernombre ASC;";
-
+//envia el sql a la base de datos
         $resource = $this->_conn->prepare($sql);
         $resource->execute();
         $rows = $resource->fetchAll(PDO::FETCH_ASSOC);
-
+//retorna el arreglo
         return $rows;
     }
 
@@ -29,9 +31,6 @@ class PersonaRepository extends Conn {
         $sql = "INSERT INTO persona( primernombre, otrosnombres, primerapellido, otroapellido, tipodocumento, documento, genero, fechanaciemiento, direccion, telefono, correoelectronico, psw ) ";
         $sql .= "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $resource = $this->_conn->prepare($sql);
-
-       
-        
         $pNom = $entity->get_primernombre();
         $oNom = $entity->get_otrosnombres();
         $pAp = $entity->get_primerapellido();
@@ -57,13 +56,7 @@ class PersonaRepository extends Conn {
         $resource->bindParam(10, $tel);
         $resource->bindParam(11, $crr);
         $resource->bindParam(12, $pas);
-
-        return   $resource->execute();
-
-//        echo "<pre>";
-//        $resource->debugDumpParams();
-//        echo "</pre>";
-
+        $resource->execute();
         return $resource;
     }
 

@@ -9,6 +9,7 @@ use Module\Usuario\Controller\UsuarioController;
 use Module\Usuario\Model\Persona;
 use Module\Usuario\Model\Usuario;
 
+// recibe datos del formulario
 $nom = filter_input(INPUT_POST, "name");
 $onom = filter_input(INPUT_POST, "oName");
 $pape = filter_input(INPUT_POST, "pAp");
